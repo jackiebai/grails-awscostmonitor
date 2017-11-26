@@ -1,0 +1,30 @@
+
+# awsCostMonitor
+
+This is an AWS cost monitoring utility to fetch daily costs through cloudcheckr apis and present statistics on a kibana dashboard
+
+## VM Setup Steps
+
+. Install Vagrant
+. Install Virtual box
+. Modify Vagrant.config to sync your awsCostMonitor folder
+. Open a terminal window, then run the command
+   Vagrant up
+. run "Vagrant ssh" to connect to the VM
+. to run the application, go the the awsCostMonitor folder, then run command: "grails run"
+
+## OSX Commands:
+ - Start Mongodb:
+   mongod
+
+ - Start elasticsearch:
+   cd elasticsearch-5.4.1/bin
+   ./elasticsearch
+
+ - Start kibana:
+   cd kibana-5.4.1-darwin-x86_64/bin
+   ./kibana
+
+
+CloudCheckr Restful API
+https://api.cloudcheckr.com/api/billing.json/get_monthly_bill?access_key=[key]&aws_account_id=[id]&for_date=11-24-2017
